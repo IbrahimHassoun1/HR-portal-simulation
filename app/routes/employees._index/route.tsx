@@ -40,7 +40,7 @@ export default function EmployeesPage() {
   return (
     <div className="bg-secondary text-black  min-h-screen flex flex-col flex-wrap">
       <div className="containers flex flex-wrap  pt-3 pl-10 w-full mx-auto mb-4 justify-center sm:justify-around">
-          <div id="left" className="w-2xs border rounded-2xl p-4 flex flex-col items-center ">
+          <div id="left" className="w-full sm:w-[33.333%] border rounded-2xl p-4 flex flex-col items-center ">
               <h1 className="text-2xl font-extrabold">Search</h1>
               <input type="text" placeholder="Search" className="border block rounded-md p-1" onChange={(e)=>setSearch(e.target.value)} />
 
@@ -105,7 +105,7 @@ export default function EmployeesPage() {
               
              
           </div>
-          <div id="right" className="w-full sm:w-3xl">
+          <div id="right" className="w-full sm:w-[66.666%] ">
             {filteredEmployees.map((employee: any) => (
               <div key={employee.id} className="pl-8 pt-3 flex justify-between">
                 <ul>
