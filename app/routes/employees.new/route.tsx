@@ -93,7 +93,10 @@ export const action: ActionFunction = async ({ request }) => {
       cvName,
     ]
   );
-
+  console.log(full_name,birthday,email,phone,
+    department,title,salary,start_time,end_time || null,
+    imageName,
+    cvName,)
   return redirect("/employees")
 };
 
@@ -195,7 +198,7 @@ export default function NewEmployeePage() {
               <input type="date"
             name="end_time"
                 id="end_time"
-                required className="border ml-5 rounded-full"
+                 className="border ml-5 rounded-full"
               />
             </>
           :""}

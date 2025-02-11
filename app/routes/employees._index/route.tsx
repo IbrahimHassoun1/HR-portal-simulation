@@ -35,7 +35,9 @@ export default function EmployeesPage() {
         fetchEmployees();
       }, [minAge, maxAge, minSalary, maxSalary, search, sortBy,onlyActive,department]);
 
-    
+    useEffect(()=>{
+      console.log(employees)
+    })
     
   return (
     <div className="bg-secondary text-black  min-h-screen flex flex-col flex-wrap">

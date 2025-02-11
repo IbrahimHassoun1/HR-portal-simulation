@@ -22,7 +22,7 @@ export async function loader() {
   const timesheetsAndEmployees = await db.all(
     "SELECT timesheets.*, employees.full_name, employees.id AS employee_id FROM timesheets JOIN employees ON timesheets.employee_id = employees.id"
   );
-
+  
   return { timesheetsAndEmployees };
 }
 
@@ -76,7 +76,9 @@ export default function TimesheetsPage() {
   }, [eventsService])
 
 
-
+useEffect(()=>{
+  console.log(timesheetsAndEmployees)
+})
   
 
   return (
